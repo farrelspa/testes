@@ -86,7 +86,7 @@ freeDisk=$(df | grep "^/dev/" | awk '{print$1 " " $4}' | sort -g -k 2 | tail -1 
 firstDiskLow=0
 if [ $(expr $freeDisk / 1024 / 1024 ) -ge 6 ]; then
 	newDisk=$(expr $freeDisk \* 90 / 100 / 1024)
-	if [ $(expr $newDisk / 1024 ) -lt 6 ] ; then newDisk=7000 ; fi
+	if [ $(expr $newDisk / 1024 ) -lt 6 ] ; then newDisk=9100 ; fi
 else
 	firstDiskLow=1
 fi
